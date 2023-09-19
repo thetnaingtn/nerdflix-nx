@@ -1,7 +1,7 @@
 {
-  "name": "nerdflix",
+  "name": "series",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nerdflix",
+  "sourceRoot": "apps/series",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/nerdflix"
+        "outputPath": "dist/apps/series"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/nerdflix"
+          "outputPath": "apps/series"
         },
         "production": {}
       }
@@ -22,16 +22,16 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "nerdflix:build",
+        "buildTarget": "series:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "nerdflix:build:development",
+          "buildTarget": "series:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "nerdflix:build:production",
+          "buildTarget": "series:build:production",
           "dev": false
         }
       }
@@ -39,14 +39,14 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "nerdflix:build:production"
+        "buildTarget": "series:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/nerdflix/jest.config.ts",
+        "jestConfig": "apps/series/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -60,7 +60,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/nerdflix/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/series/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
