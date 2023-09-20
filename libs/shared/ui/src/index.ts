@@ -1,3 +1,4 @@
+export * from './lib/footer/footer';
 export * from './lib/nav/nav';
 export { default as Xmark } from './lib/icons/xmark';
 export { default as PlayIcon } from './lib/icons/play';
