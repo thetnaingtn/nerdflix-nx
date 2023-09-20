@@ -1,4 +1,5 @@
 import './global.css';
+import { Layout } from '@nerdflix/shared/components';
 
 export const metadata = {
   title: 'Welcome to films',
@@ -12,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black">{children}</body>
+      <body className="bg-black">
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }
