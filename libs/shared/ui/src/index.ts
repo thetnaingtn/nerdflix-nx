@@ -1,3 +1,4 @@
+export * from './lib/opt-form/opt-form';
 export * from './lib/jumbotron/jumbotron';
 export * from './lib/accordion/accordion';
 export * from './lib/footer/footer';
