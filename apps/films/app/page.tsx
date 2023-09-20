@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 import { getShow, getSearchedResult } from '@nerdflix/shared/fetcher';
+import { getRandomShow } from '@nerdflix/shared/util/show';
 import { Hero, Collections } from '@nerdflix/shared/components';
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default async function Page({
   const allShows = await getShow('movie');
   const searchedResults = await getSearchedResult(searchParams?.search ?? '');
 
-  const randomShow = allShows.netflix[3];
+  const randomShow = getRandomShow(allShows.netflix);
   const collections = [
     { title: 'Trending', shows: allShows.trending },
     { title: 'Top Rated', shows: allShows.topRated },

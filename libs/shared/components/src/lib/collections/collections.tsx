@@ -6,14 +6,8 @@ import { useState } from 'react';
 
 import { Card } from '@nerdflix/shared/ui';
 import { Show } from '@nerdflix/shared/types';
-// import { getSafeImageUrl } from '@/lib/util';
+import { getSafeImageUrl } from '@nerdflix/shared/util/image';
 import { ShowModal } from '../show-modal/show-modal';
-
-export function getSafeImageUrl(url: string | null) {
-  if (!url)
-    return 'https://via.placeholder.com/230x130.jpg/ffffff?text=No+Movie+Poster';
-  return `https://image.tmdb.org/t/p/original${url}`;
-}
 
 interface Collection {
   title: string;
