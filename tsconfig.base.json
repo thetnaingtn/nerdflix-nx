@@ -17,7 +17,8 @@
     "paths": {
       "@nerdflix/shared/components": ["libs/shared/components/src/index.ts"],
       "@nerdflix/shared/fetcher": ["libs/shared/fetcher/src/index.ts"],
-      "@nerdflix/shared/types": ["libs/shared/types/types.ts"]
+      "@nerdflix/shared/types": ["libs/shared/types/types.ts"],
+      "@nerdflix/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

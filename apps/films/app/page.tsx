@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 import { getShow, getSearchedResult } from '@nerdflix/shared/fetcher';
-import { Hero } from '@nerdflix/shared/components';
+import { Hero, Collections } from '@nerdflix/shared/components';
 
 export const metadata: Metadata = {
   title: 'Nerdflix | Films',
@@ -29,7 +29,11 @@ export default async function Page({
   return (
     <section>
       <div className="pt-10">
-        <Hero type="show" show={randomShow} />
+        {searchedResults.length < 1 && <Hero type="show" show={randomShow} />}
+        <Collections
+          collections={collections}
+          searchedResults={searchedResults}
+        />
       </div>
     </section>
   );

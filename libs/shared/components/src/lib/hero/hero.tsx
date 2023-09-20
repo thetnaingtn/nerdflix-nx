@@ -1,17 +1,13 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
-
+import Image from 'next/image';
 import { twMerge as tm } from 'tailwind-merge';
 
-// import PlayIcon from '@/app/ui/icons/play';
-// import ExclamationCircleIcon from '@/app/ui/icons/exclamation-circle';
-
+import { PlayIcon } from '@nerdflix/shared/ui';
+import { ExclamationCircleIcon } from '@nerdflix/shared/ui';
+import { ShowModal } from '../show-modal/show-modal';
 import type { Show } from '@nerdflix/shared/types';
-// import ShowModal from './show-modal';
-
-import '../../styles.css';
 
 type HeroProps =
   | {
@@ -74,7 +70,7 @@ export function Hero(props: HeroProps & { className?: string }) {
                 className="h-auto gap-1.5 rounded bg-white px-4 py-2 flex items-center justify-center text-sm font-medium"
                 onClick={handleToggleDialog}
               >
-                {/* <PlayIcon /> */}
+                <PlayIcon />
                 Play
               </button>
               <button
@@ -82,17 +78,17 @@ export function Hero(props: HeroProps & { className?: string }) {
                 className="h-auto gap-2 rounded border border-solid border-white px-4 py-2 text-white flex items-center justify-center"
                 onClick={handleToggleDialog}
               >
-                {/* <ExclamationCircleIcon /> */}
+                <ExclamationCircleIcon />
                 More Info
               </button>
             </div>
           </div>
         </div>
-        {/* <ShowModal
+        <ShowModal
           toggle={toggle}
           toggleHandler={setToggle}
           show={props.show}
-        /> */}
+        />
       </>
     );
   } else {
