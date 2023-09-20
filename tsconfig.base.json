@@ -14,16 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "resolveJsonModule": true,
-    "noPropertyAccessFromIndexSignature":false,
+    "noPropertyAccessFromIndexSignature": false,
     "baseUrl": ".",
     "paths": {
       "@nerdflix/shared/assets/*": ["libs/shared/assets/*"],
       "@nerdflix/shared/components": ["libs/shared/components/src/index.ts"],
       "@nerdflix/shared/fetcher": ["libs/shared/fetcher/src/index.ts"],
       "@nerdflix/shared/firebase": ["libs/shared/firebase/src/index.ts"],
+      "@nerdflix/shared/nextauth": ["libs/shared/nextauth/src/index.ts"],
       "@nerdflix/shared/types": ["libs/shared/types/types.ts"],
       "@nerdflix/shared/ui": ["libs/shared/ui/src/index.ts"],
-      "@nerdflix/shared/util/*":["libs/shared/util/*"]
+      "@nerdflix/shared/util/*": ["libs/shared/util/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
