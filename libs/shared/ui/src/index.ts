@@ -1,3 +1,4 @@
+export { default as Feature } from './lib/feature/feature';
 export { default as Form } from './lib/form/form';
 export { default as OptForm } from './lib/opt-form/opt-form';
 export * from './lib/jumbotron/jumbotron';
