@@ -13,8 +13,10 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
+      "@nerdflix/shared/assets/*":["libs/shared/assets/*"],
       "@nerdflix/shared/components": ["libs/shared/components/src/index.ts"],
       "@nerdflix/shared/fetcher": ["libs/shared/fetcher/src/index.ts"],
       "@nerdflix/shared/types": ["libs/shared/types/types.ts"],

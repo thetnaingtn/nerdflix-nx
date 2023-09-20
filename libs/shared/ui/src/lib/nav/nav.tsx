@@ -13,8 +13,8 @@ import {
   InputProps,
   TextLinkProps,
 } from '@nerdflix/shared/types';
-import logo from '../../../../public/logo.svg';
-import searchIcon from '../../../../public/search.png';
+import logo from '@nerdflix/shared/assets/images/logo.svg';
+import searchIcon from '@nerdflix/shared/assets/images/search.png';
 
 export default function Nav({ children }: PropsWithChildren) {
   return <nav>{children}</nav>;

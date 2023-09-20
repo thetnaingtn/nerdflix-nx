@@ -1,5 +1,5 @@
 import { Accordion } from '@nerdflix/shared/ui';
-import faqsData from '@/fixtures/faq.json';
+import faqsData from '@nerdflix/shared/assets/fixtures/faq.json';
 import { OptForm } from '@nerdflix/shared/ui';
 
 export default function Faq() {
