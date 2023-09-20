@@ -1,10 +1,11 @@
-export * from './lib/opt-form/opt-form';
+export { default as Form } from './lib/form/form';
+export { default as OptForm } from './lib/opt-form/opt-form';
 export * from './lib/jumbotron/jumbotron';
-export * from './lib/accordion/accordion';
+export * as Accordion from './lib/accordion/accordion';
 export * from './lib/footer/footer';
-export * from './lib/nav/nav';
 export { default as Xmark } from './lib/icons/xmark';
 export { default as PlayIcon } from './lib/icons/play';
 export { default as ExclamationCircleIcon } from './lib/icons/exclamation-circle';
 export * from './lib/card/card';
 export * from './lib/dialog/dialog';
+export * as Nav from './lib/nav/nav';
