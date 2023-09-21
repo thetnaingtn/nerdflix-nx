@@ -47,6 +47,7 @@
     "autoprefixer": "10.4.13",
     "babel-jest": "^29.4.1",
     "cypress": "^12.16.0",
+    "encoding": "^0.1.13",
     "eslint": "~8.46.0",
     "eslint-config-next": "13.4.1",
     "eslint-config-prettier": "8.1.0",
