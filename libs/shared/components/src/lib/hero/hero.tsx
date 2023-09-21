@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { twMerge as tm } from 'tailwind-merge';
 
 import { PlayIcon } from '@nerdflix/shared/ui';
@@ -16,7 +16,7 @@ type HeroProps =
     }
   | {
       type: 'static';
-      src: string;
+      src: StaticImageData;
       children: React.ReactNode;
     };
 
