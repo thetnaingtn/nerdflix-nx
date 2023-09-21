@@ -7,30 +7,41 @@ import { getServerSession } from 'next-auth';
 export default async function ProtectedLayout({ children }: PropsWithChildren) {
   const session = await getServerSession();
 
+  function renderWhenSessionValid(element: JSX.Element) {
+    if (!session) return null;
+    return element;
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <Nav.default>
         <Nav.Frame>
           <Nav.Group>
             <Nav.Logo />
-            <Nav.TextLink href="/series">Series</Nav.TextLink>
-            <Nav.TextLink href="/films">Films</Nav.TextLink>
+            {renderWhenSessionValid(
+              <>
+                <Nav.TextLink href="/series">Series</Nav.TextLink>
+                <Nav.TextLink href="/films">Films</Nav.TextLink>
+              </>
+            )}
           </Nav.Group>
-          <Nav.Group>
-            <Nav.Search />
-            <Nav.Profile>
-              <Nav.Picture />
-              <Nav.Dropdown>
-                <Nav.Group>
-                  <Nav.Picture className="mr-3" />
-                  <Nav.TextLink href="#">{session?.user?.email}</Nav.TextLink>
-                </Nav.Group>
-                <Nav.Group>
-                  <Nav.SignOutButton>Sign Out</Nav.SignOutButton>
-                </Nav.Group>
-              </Nav.Dropdown>
-            </Nav.Profile>
-          </Nav.Group>
+          {renderWhenSessionValid(
+            <Nav.Group>
+              <Nav.Search />
+              <Nav.Profile>
+                <Nav.Picture />
+                <Nav.Dropdown>
+                  <Nav.Group>
+                    <Nav.Picture className="mr-3" />
+                    <Nav.TextLink href="#">{session?.user?.email}</Nav.TextLink>
+                  </Nav.Group>
+                  <Nav.Group>
+                    <Nav.SignOutButton>Sign Out</Nav.SignOutButton>
+                  </Nav.Group>
+                </Nav.Dropdown>
+              </Nav.Profile>
+            </Nav.Group>
+          )}
         </Nav.Frame>
       </Nav.default>
       <main className="flex-1">{children}</main>
