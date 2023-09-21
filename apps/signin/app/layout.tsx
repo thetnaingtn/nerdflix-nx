@@ -1,5 +1,5 @@
+import '@nerdflix/shared/assets/resources/styles.css';
 import { Layout } from '@nerdflix/shared/components';
-import './global.css';
 
 export const metadata = {
   title: 'Welcome to signin',

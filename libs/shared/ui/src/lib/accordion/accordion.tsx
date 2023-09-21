@@ -11,6 +11,8 @@ import {
 import Image from 'next/image';
 
 import { DivProps, HeadingProps } from '@nerdflix/shared/types';
+import Close from '@nerdflix/shared/assets/images/close-slim.png';
+import Open from '@nerdflix/shared/assets/images/add.png';
 
 const ToggleContext = createContext<null | {
   toggle: boolean;
@@ -93,17 +95,11 @@ export function Header({ children, className, ...restProps }: DivProps) {
           className="icon"
           width={24}
           height={24}
-          src="/close-slim.png"
+          src={Close}
           alt="close"
         />
       ) : (
-        <Image
-          className="icon"
-          width={24}
-          height={24}
-          src="/add.png"
-          alt="open"
-        />
+        <Image className="icon" width={24} height={24} src={Open} alt="open" />
       )}
     </div>
   );

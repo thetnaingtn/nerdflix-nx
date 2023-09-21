@@ -1,4 +1,4 @@
-import './global.css';
+import '@nerdflix/shared/assets/resources/styles.css';
 import { Layout } from '@nerdflix/shared/components';
 
 export const metadata = {
@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body>
         <Layout>{children}</Layout>
       </body>
     </html>
