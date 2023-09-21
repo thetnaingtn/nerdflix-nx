@@ -19,7 +19,11 @@ interface ShowModalProps {
   toggle: boolean;
 }
 
-export function ShowModal({ show, toggle, toggleHandler }: ShowModalProps) {
+export default function ShowModal({
+  show,
+  toggle,
+  toggleHandler,
+}: ShowModalProps) {
   const [trailer, setTrailer] = useState('');
   const [genres, setGenres] = useState<{ id: number; name: string }[]>([]);
   const pathname = usePathname();

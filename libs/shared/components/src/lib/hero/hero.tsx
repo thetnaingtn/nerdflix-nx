@@ -6,7 +6,7 @@ import { twMerge as tm } from 'tailwind-merge';
 
 import { PlayIcon } from '@nerdflix/shared/ui';
 import { ExclamationCircleIcon } from '@nerdflix/shared/ui';
-import { ShowModal } from '../show-modal/show-modal';
+import ShowModal from '../show-modal/show-modal';
 import type { Show } from '@nerdflix/shared/types';
 
 type HeroProps =
@@ -20,7 +20,7 @@ type HeroProps =
       children: React.ReactNode;
     };
 
-export function Hero(props: HeroProps & { className?: string }) {
+export default function Hero(props: HeroProps & { className?: string }) {
   const [toggle, setToggle] = useState(false);
 
   const handleToggleDialog = () => {

@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { Card } from '@nerdflix/shared/ui';
 import { Show } from '@nerdflix/shared/types';
 import { getSafeImageUrl } from '@nerdflix/shared/util/image';
-import { ShowModal } from '../show-modal/show-modal';
+import ShowModal from '../show-modal/show-modal';
 
 interface Collection {
   title: string;
@@ -21,7 +21,7 @@ interface CollectionsProps {
 
 const TRUNCATE_OPTIONS = { length: 149 };
 
-export function Collections({
+export default function Collections({
   collections,
   searchedResults,
 }: CollectionsProps) {
