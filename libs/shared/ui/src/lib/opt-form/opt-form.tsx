@@ -7,6 +7,7 @@ import {
   InputProps,
   ParagraphProps,
 } from '@nerdflix/shared/types';
+import ChevronRight from '@nerdflix/shared/assets/images/chevron-right.png';
 
 function OptForm({ children, className, ...restProps }: DivProps) {
   return (
@@ -53,7 +54,7 @@ function Button({ children, className, ...restProps }: ButtonProps) {
     >
       {children}
       <Image
-        src="/chevron-right.png"
+        src={ChevronRight}
         className="icon ml-[10px] max-[1000px] max-[1000px]:w-4"
         width={24}
         height={24}
