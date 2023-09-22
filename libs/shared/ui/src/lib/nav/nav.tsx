@@ -5,13 +5,14 @@ import { signOut } from 'next-auth/react';
 import { usePathname, useRouter } from 'next/navigation';
 import { twMerge as tm } from 'tailwind-merge';
 import Image from 'next/image';
-import { HTMLAttributes, PropsWithChildren, useState } from 'react';
+import type { HTMLAttributes, PropsWithChildren } from 'react';
+import { useState } from 'react';
 
-import {
+import type {
   ButtonProps,
   DivProps,
   InputProps,
-  TextLinkProps,
+  AnchorProps,
 } from '@nerdflix/shared/types';
 import logo from '@nerdflix/shared/assets/images/logo.svg';
 import searchIcon from '@nerdflix/shared/assets/images/search.png';
@@ -34,7 +35,7 @@ export function Group({ children }: PropsWithChildren) {
 
 export function Logo() {
   return (
-    <Link href="/">
+    <a href="http://localhost:4500">
       <Image
         alt="Nextflix"
         src={logo}
@@ -42,7 +43,7 @@ export function Logo() {
         width={134}
         className="mr-10 xl:h-[45px] xl:w-[167px]"
       />
-    </Link>
+    </a>
   );
 }
 
@@ -58,12 +59,12 @@ export function ButtonLink(props: PropsWithChildren<LinkProps>) {
   );
 }
 
-export function TextLink(props: TextLinkProps) {
+export function TextLink(props: AnchorProps) {
   const { children, className, ...restProps } = props;
   const pathname = usePathname();
 
   return (
-    <Link
+    <a
       className={tm(
         'text-white no-underline mr-[30px] font-normal cursor-pointer last-of-type:mr-0',
         pathname === props.href ? 'font-bold' : '',
@@ -72,7 +73,7 @@ export function TextLink(props: TextLinkProps) {
       {...restProps}
     >
       {children}
-    </Link>
+    </a>
   );
 }
 

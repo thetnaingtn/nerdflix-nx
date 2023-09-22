@@ -1,5 +1,6 @@
 import { LinkProps } from 'next/link';
 import type {
+  AnchorHTMLAttributes,
   ButtonHTMLAttributes,
   HTMLAttributes,
   ImgHTMLAttributes,
@@ -27,6 +28,10 @@ export type ImageProps = ImgHTMLAttributes<HTMLImageElement>;
 
 export type TextLinkProps = PropsWithChildren<
   LinkProps & { className?: string }
+>;
+
+export type AnchorProps = PropsWithChildren<
+  AnchorHTMLAttributes<HTMLAnchorElement>
 >;
 
 export type MediaType = 'tv' | 'movie';

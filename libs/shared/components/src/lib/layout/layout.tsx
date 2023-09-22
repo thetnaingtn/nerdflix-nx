@@ -22,8 +22,12 @@ export default async function ProtectedLayout({ children }: PropsWithChildren) {
               <Nav.Logo />
               {renderWhenSessionValid(
                 <>
-                  <Nav.TextLink href="/series">Series</Nav.TextLink>
-                  <Nav.TextLink href="/films">Films</Nav.TextLink>
+                  <Nav.TextLink href="http://localhost:4300">
+                    Series
+                  </Nav.TextLink>
+                  <Nav.TextLink href="http://localhost:4400">
+                    Films
+                  </Nav.TextLink>
                 </>
               )}
             </Nav.Group>

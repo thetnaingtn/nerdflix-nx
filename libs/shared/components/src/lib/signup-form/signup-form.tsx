@@ -57,7 +57,8 @@ export default function SigUp() {
         </Form.Submit>
       </Form.Base>
       <Form.Text>
-        Already a user? <Form.Link href="/signin">Sign in now.</Form.Link>
+        Already a user?{' '}
+        <Form.Link href="http://localhost:4200">Sign in now.</Form.Link>
       </Form.Text>
       <Form.TextSmall>
         {`This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.`}

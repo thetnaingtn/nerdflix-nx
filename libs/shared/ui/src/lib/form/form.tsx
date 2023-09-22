@@ -1,14 +1,13 @@
 import { twMerge as tm } from 'tailwind-merge';
-import NextLink from 'next/link';
-import {
+import type {
+  AnchorProps,
   ButtonProps,
   DivProps,
   HeadingProps,
   InputProps,
   ParagraphProps,
-  TextLinkProps,
 } from '@nerdflix/shared/types';
-import { FormHTMLAttributes, PropsWithChildren } from 'react';
+import type { FormHTMLAttributes, PropsWithChildren } from 'react';
 
 function Form({ children, className, ...restProps }: DivProps) {
   return (
@@ -89,14 +88,11 @@ function TextSmall({ children, className, ...restProps }: any) {
   );
 }
 
-function Link({ children, className, ...restProps }: TextLinkProps) {
+function Link({ children, className, ...restProps }: AnchorProps) {
   return (
-    <NextLink
-      className={tm('text-white hover:underline', className)}
-      {...restProps}
-    >
+    <a className={tm('text-white hover:underline', className)} {...restProps}>
       {children}
-    </NextLink>
+    </a>
   );
 }
 
