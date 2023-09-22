@@ -11,14 +11,19 @@ type Credential = {
 export const authOptions = {
   // Configure one or more authentication providers
   pages: {
-    signIn: '/signin',
+    signIn: 'http://localhost:4200',
+  },
+  callbacks: {
+    async redirect({ url, baseUrl }: { url: string; baseUrl: string }) {
+      if (url.startsWith('/')) return `${baseUrl}${url}`;
+      return url;
+    },
   },
   providers: [
     CredentialsProvider({
       name: 'Credentials',
       credentials: {},
       async authorize(credentials): Promise<any> {
-        console.log('here');
         return await signInWithEmailAndPassword(
           auth,
           (credentials as unknown as Credential).email || '',

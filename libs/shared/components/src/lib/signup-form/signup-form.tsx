@@ -22,7 +22,7 @@ export default function SigUp() {
         email,
         password,
         redirect: true,
-        callbackUrl: '/series',
+        callbackUrl: 'http://localhost:4300',
       });
     } catch (error) {
       setError((error as Error).message);

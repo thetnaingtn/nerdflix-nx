@@ -1,4 +1,5 @@
 import '@nerdflix/shared/assets/resources/styles.css';
+import { Layout } from '@nerdflix/shared/components';
 
 export const metadata = {
   title: 'Welcome to series',
@@ -12,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

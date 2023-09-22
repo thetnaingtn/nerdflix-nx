@@ -9,13 +9,13 @@ export default function SigIn() {
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSignin: FormEventHandler<HTMLFormElement> = (e) => {
+  const handleSignin: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     signIn('credentials', {
       email: emailAddress,
       password,
       redirect: true,
-      callbackUrl: '/series',
+      callbackUrl: 'http://localhost:4300',
     }).catch((err) => {
       setError(err.message);
     });
