@@ -63,6 +63,19 @@
       "options": {
         "lintFilePatterns": ["apps/signup/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/signup/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "signup:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "signup:serve:production"
+        }
+      }
     }
   },
   "tags": []
