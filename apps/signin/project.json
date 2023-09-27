@@ -62,6 +62,19 @@
       "options": {
         "lintFilePatterns": ["apps/signin/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/signin/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "signin:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "signin:serve:production"
+        }
+      }
     }
   },
   "tags": []
