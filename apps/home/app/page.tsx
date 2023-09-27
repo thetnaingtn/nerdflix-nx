@@ -33,7 +33,7 @@ export default function Page() {
       <Jumbotron.Container>
         {jumboData.map((jumbo) => {
           return (
-            <Jumbotron
+            <Jumbotron.default
               key={jumbo.id}
               direction={
                 `flex-${jumbo.direction}` as 'flex-row' | 'flex-row-reverse'
@@ -47,7 +47,7 @@ export default function Page() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={jumbo.image} alt={jumbo.alt} className="max-w-full" />
               </Jumbotron.Pane>
-            </Jumbotron>
+            </Jumbotron.default>
           );
         })}
       </Jumbotron.Container>

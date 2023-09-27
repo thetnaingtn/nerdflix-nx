@@ -1,7 +1,6 @@
 export { default as Feature } from './lib/feature/feature';
 export { default as Form } from './lib/form/form';
 export { default as OptForm } from './lib/opt-form/opt-form';
-export { default as Jumbotron } from './lib/jumbotron/jumbotron';
 export { default as Footer } from './lib/footer/footer';
 export { default as Xmark } from './lib/icons/xmark';
 export { default as PlayIcon } from './lib/icons/play';
@@ -9,4 +8,5 @@ export { default as ExclamationCircleIcon } from './lib/icons/exclamation-circle
 export * as Accordion from './lib/accordion/accordion';
 export * from './lib/card/card';
 export * from './lib/dialog/dialog';
+export * as Jumbotron from './lib/jumbotron/jumbotron';
 export * as Nav from './lib/nav/nav';

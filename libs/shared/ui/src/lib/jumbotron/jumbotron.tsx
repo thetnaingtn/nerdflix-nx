@@ -3,7 +3,7 @@ import { twMerge as tm } from 'tailwind-merge';
 import { DivProps, HeadingProps } from '@nerdflix/shared/types';
 import NextImage, { ImageProps } from 'next/image';
 
-function Jumbotron({
+export default function Jumbotron({
   children,
   className,
   direction,
@@ -29,7 +29,7 @@ function Jumbotron({
   );
 }
 
-function Container({ children, className, ...restProps }: DivProps) {
+export function Container({ children, className, ...restProps }: DivProps) {
   return (
     <div className={tm('', className)} {...restProps}>
       {children}
@@ -37,7 +37,7 @@ function Container({ children, className, ...restProps }: DivProps) {
   );
 }
 
-function Title({ children, className, ...restProps }: HeadingProps) {
+export function Title({ children, className, ...restProps }: HeadingProps) {
   return (
     <h1
       className={tm(
@@ -51,7 +51,7 @@ function Title({ children, className, ...restProps }: HeadingProps) {
   );
 }
 
-function SubTitle({ children, className, ...restProps }: HeadingProps) {
+export function SubTitle({ children, className, ...restProps }: HeadingProps) {
   return (
     <h2
       className={tm(
@@ -65,7 +65,7 @@ function SubTitle({ children, className, ...restProps }: HeadingProps) {
   );
 }
 
-function Pane({ children, className, ...restProps }: DivProps) {
+export function Pane({ children, className, ...restProps }: DivProps) {
   return (
     <div
       className={tm(
@@ -79,16 +79,8 @@ function Pane({ children, className, ...restProps }: DivProps) {
   );
 }
 
-function Image({ className, ...restProps }: ImageProps) {
+export function Image({ className, ...restProps }: ImageProps) {
   return (
     <NextImage className={tm('max-w-full h-auto', className)} {...restProps} />
   );
 }
-
-export default Object.assign(Jumbotron, {
-  Container,
-  Title,
-  SubTitle,
-  Pane,
-  Image,
-});
