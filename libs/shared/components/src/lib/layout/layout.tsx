@@ -53,7 +53,7 @@ export default async function ProtectedLayout({ children }: PropsWithChildren) {
           </Nav.Frame>
         </Nav.default>
         <main className="flex-1">{children}</main>
-        <Footer>
+        <Footer.default>
           <Footer.Title>Questions? Contact us.</Footer.Title>
           <Footer.Break />
           <Footer.Row>
@@ -88,7 +88,7 @@ export default async function ProtectedLayout({ children }: PropsWithChildren) {
           </Footer.Row>
           <Footer.Break />
           <Footer.Text>Netflix United Kingdom</Footer.Text>
-        </Footer>
+        </Footer.default>
       </Provider>
     </div>
   );

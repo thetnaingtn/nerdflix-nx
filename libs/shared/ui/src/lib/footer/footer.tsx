@@ -1,7 +1,7 @@
 import { AnchorHTMLAttributes, HTMLAttributes, PropsWithChildren } from 'react';
 import { twMerge as tm } from 'tailwind-merge';
 
-function Column({
+export function Column({
   children,
   className,
   ...restProps
@@ -13,7 +13,7 @@ function Column({
   );
 }
 
-function Row({
+export function Row({
   children,
   className,
   ...restProps
@@ -31,7 +31,7 @@ function Row({
   );
 }
 
-function Link({
+export function Link({
   children,
   className,
   ...restProps
@@ -46,7 +46,7 @@ function Link({
   );
 }
 
-function Title({
+export function Title({
   children,
   className,
   ...restProps
@@ -61,7 +61,7 @@ function Title({
   );
 }
 
-function Text({
+export function Text({
   children,
   className,
   ...restProps
@@ -76,7 +76,7 @@ function Text({
   );
 }
 
-function Break({
+export function Break({
   children,
   className,
   ...restProps
@@ -88,7 +88,7 @@ function Break({
   );
 }
 
-function Footer({
+export default function Footer({
   children,
   className,
   ...restProps
@@ -107,5 +107,3 @@ function Footer({
     </div>
   );
 }
-
-export default Object.assign(Footer, { Column, Row, Link, Title, Text, Break });
