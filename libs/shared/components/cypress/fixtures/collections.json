@@ -1,0 +1,75 @@
+[
+  {
+    "title": "Trending",
+    "shows": [
+      {
+        "adult": false,
+        "backdrop_path": "/zYlgqIpqJ1VAbvFhRhktAzIybVs.jpg",
+        "id": 820609,
+        "title": "No One Will Save You",
+        "original_language": "en",
+        "original_title": "No One Will Save You",
+        "overview": "An exiled anxiety-ridden homebody must battle an alien who's found its way into her home.",
+        "poster_path": "/ehGIDAMaYy6Eg0o8ga0oqflDjqW.jpg",
+        "media_type": "movie",
+        "genre_ids": [27, 878, 53],
+        "popularity": 474.659,
+        "release_date": "2023-09-22",
+        "video": false,
+        "vote_average": 6.962,
+        "vote_count": 236
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg",
+        "id": 976573,
+        "title": "Elemental",
+        "original_language": "en",
+        "original_title": "Elemental",
+        "overview": "In a city where fire, water, land and air residents live together, a fiery young woman and a go-with-the-flow guy will discover something elemental: how much they have in common.",
+        "poster_path": "/4Y1WNkd88JXmGfhtWR7dmDAo1T2.jpg",
+        "media_type": "movie",
+        "genre_ids": [16, 35, 10751, 14, 10749],
+        "popularity": 831.035,
+        "release_date": "2023-06-14",
+        "video": false,
+        "vote_average": 7.76,
+        "vote_count": 2371
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/A8paSZwFPs5EmMGE2hbNGKqBfC5.jpg",
+        "id": 856289,
+        "title": "Creation of the Gods I: Kingdom of Storms",
+        "original_language": "zh",
+        "original_title": "封神第一部：朝歌风云",
+        "overview": "Based on the most well-known classical fantasy novel of China, Fengshenyanyi, the trilogy is a magnificent eastern high fantasy epic that recreates the prolonged mythical wars between humans, immortals and monsters, which happened more than three thousand years ago.",
+        "poster_path": "/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg",
+        "media_type": "movie",
+        "genre_ids": [28, 14, 10752],
+        "popularity": 303.619,
+        "release_date": "2023-07-20",
+        "video": false,
+        "vote_average": 7.47,
+        "vote_count": 83
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/rMvPXy8PUjj1o8o1pzgQbdNCsvj.jpg",
+        "id": 299054,
+        "title": "Expend4bles",
+        "original_language": "en",
+        "original_title": "Expend4bles",
+        "overview": "Armed with every weapon they can get their hands on and the skills to use them, The Expendables are the world’s last line of defense and the team that gets called when all other options are off the table. But new team members with new styles and tactics are going to give “new blood” a whole new meaning.",
+        "poster_path": "/iwsMu0ehRPbtaSxqiaUDQB9qMWT.jpg",
+        "media_type": "movie",
+        "genre_ids": [28, 12, 53],
+        "popularity": 489.718,
+        "release_date": "2023-09-15",
+        "video": false,
+        "vote_average": 6.484,
+        "vote_count": 62
+      }
+    ]
+  }
+]

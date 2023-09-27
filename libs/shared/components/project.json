@@ -31,7 +31,6 @@
       "options": {
         "cypressConfig": "libs/shared/components/cypress.config.ts",
         "testingType": "component",
-        "devServerTarget": "films:build",
         "skipServe": true
       }
     }

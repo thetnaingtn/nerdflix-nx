@@ -1,15 +1,12 @@
-import { nxComponentTestingPreset } from '@nx/react/plugins/component-testing';
+import { nxComponentTestingPreset } from '@nx/next/plugins/component-testing';
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
-  video: false,
   component: {
-    ...nxComponentTestingPreset(__filename, {
-      bundler: 'webpack',
-    }),
-    setupNodeEvents(on, config) {
-      config.env = process.env;
-      return config;
-    },
+    ...nxComponentTestingPreset(__filename),
+    // devServer: {
+    //   framework: 'next',
+    //   bundler: 'webpack',
+    // },
   },
 });
