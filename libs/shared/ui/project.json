@@ -31,7 +31,6 @@
       "options": {
         "cypressConfig": "libs/shared/ui/cypress.config.ts",
         "testingType": "component",
-        "devServerTarget": "",
         "skipServe": true
       }
     }

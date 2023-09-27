@@ -83,6 +83,7 @@ export function Header({ children, className, ...restProps }: DivProps) {
   return (
     <div
       onClick={() => setToggle(!toggle)}
+      data-testid="accordion-header"
       className={tm(
         'flex justify-between cursor-pointer mb-1 text-[26px] font-normal bg-[#303030] py-[0.8em] px-[1.2em] select-none items-center',
         className
@@ -92,6 +93,7 @@ export function Header({ children, className, ...restProps }: DivProps) {
       {children}
       {toggle ? (
         <Image
+          data-testid="accordion-body"
           className="icon"
           width={24}
           height={24}
