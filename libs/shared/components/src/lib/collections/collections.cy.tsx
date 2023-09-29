@@ -11,12 +11,19 @@ Object.defineProperty(NextImage, 'default', {
 });
 
 describe(Collections.name, () => {
-  it('renders', () => {
+  it('should render collection component', () => {
     cy.mount(
       <Collections searchedResults={[]} collections={collections as any} />
     );
 
     cy.contains('Trending').should('be.visible');
     cy.get('img').should('have.length', 4);
+
+    cy.get("[data-testid='item']").eq(0).click();
+    cy.get('h2').should('have.text', 'No One Will Save You');
+
+    cy.get("button[data-testid='dialog-close'").click();
+    cy.contains('No One Will Save You').should('not.be.visible');
+    cy.get("[data-testid='item'").should('be.visible');
   });
 });
