@@ -53,7 +53,10 @@ export const DialogContent = React.forwardRef<
       {...restProps}
     >
       {children}
-      <DialogPrimitive.Close className="absolute right-4 top-4 z-20 rounded-full bg-neutral-800 p-1.5 opacity-70 ring-offset-slate-900 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-0 disabled:pointer-events-none data-[state=open]:bg-slate-800 dark:bg-neutral-800 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900 dark:data-[state=open]:bg-slate-800">
+      <DialogPrimitive.Close
+        data-testid="dialog-close"
+        className="absolute right-4 top-4 z-20 rounded-full bg-neutral-800 p-1.5 opacity-70 ring-offset-slate-900 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-0 disabled:pointer-events-none data-[state=open]:bg-slate-800 dark:bg-neutral-800 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900 dark:data-[state=open]:bg-slate-800"
+      >
         <Xmark />
         <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
