@@ -63,6 +63,19 @@
       "options": {
         "lintFilePatterns": ["apps/films/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/films/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "films:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "films:serve:production"
+        }
+      }
     }
   },
   "tags": []

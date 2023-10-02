@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { getShow, getSearchedResult } from '@nerdflix/shared/fetcher';
 import { getRandomShow } from '@nerdflix/shared/util/show';
 import { Hero, Collections } from '@nerdflix/shared/components';
+import { getServerSession } from 'next-auth';
 
 export const metadata: Metadata = {
   title: 'Nerdflix | Films',
@@ -26,6 +27,10 @@ export default async function Page({
     { title: 'Romance', shows: allShows.romance },
     { title: 'Documentary', shows: allShows.docs },
   ];
+
+  const session = await getServerSession();
+
+  console.log('S', session);
 
   return (
     <section>
